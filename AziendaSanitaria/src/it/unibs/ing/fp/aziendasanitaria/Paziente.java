@@ -7,6 +7,10 @@ public class Paziente extends Persona {
 		super(nome, cognome);
 	}
 	
+	public Paziente(String nome, String cognome, int id) {
+		super(nome, cognome, id);
+	}
+	
 	
 	public int generateID() {
 		int id = InputDati.leggiIntero("Inserisci il codice della tessera sanitaria: ");

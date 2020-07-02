@@ -52,7 +52,8 @@ public class Util {
 			System.out.println("3. Cerca medico");
 			System.out.println("4. Cerca paziente");
 			System.out.println("5. Riassegna paziente");
-			System.out.println("6. Termina programma");
+			System.out.println("6. Salva i dati inseriti");
+			System.out.println("7. Termina programma");
 			int query = InputDati.leggiIntero(">");
 			switch (query) {
 				case 1: {
@@ -106,7 +107,14 @@ public class Util {
 					break;
 				}
 				case 6: {
-					loop = !InputDati.yesOrNo("Vuoi davvero terminare il programma?");
+					try {
+						ScriviFile.writeMedics(asl);
+					} catch (Exception e) {System.out.println("Salvataggio non riuscito");}
+					System.out.println("Salvataggio riuscito!");
+					break;
+				}
+				case 7: {
+					loop = !InputDati.yesOrNo("Vuoi davvero terminare il programma(i dati non salvati andranno persi)?");
 					break;
 				}
 				default: {

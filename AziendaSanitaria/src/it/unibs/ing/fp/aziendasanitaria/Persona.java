@@ -11,6 +11,12 @@ public abstract class Persona {
 		this.id = generateID();
 	}
 	
+	public Persona(String nome, String cognome, int id) {
+		this.nome = nome;
+		this.cognome = cognome;
+		this.id = id;
+	}
+	
 	abstract int generateID ();
 
 	public String getNome() {

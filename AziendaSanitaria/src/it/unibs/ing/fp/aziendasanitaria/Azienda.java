@@ -69,6 +69,10 @@ public class Azienda {
 		this.totalePazienti = totalePazienti;
 	}
 	
+	public void addTotalePazienti(Paziente p) {
+		this.totalePazienti.add(p);
+	}
+	
 	
 
 }
